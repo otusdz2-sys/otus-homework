@@ -131,7 +131,9 @@ newman run postman/user-service.postman_collection.json
 > Если на машине задан системный `HTTP_PROXY`/`HTTPS_PROXY`, запускать в обход прокси:
 > `env -u HTTP_PROXY -u HTTPS_PROXY -u http_proxy -u https_proxy newman run ...`
 
-Вывод прогона:
+Результат прогона коллекции из Postman приложен рядом:
+[postman/user-service.postman_test_run.json](postman/user-service.postman_test_run.json)
+(14 проверок, 0 ошибок). Вывод newman:
 
 ```
 OTUS user-service CRUD

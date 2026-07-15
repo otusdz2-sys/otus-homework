@@ -1,0 +1,252 @@
+{
+	"id": "4e4cb100-2781-4616-9e53-524c522f0093",
+	"name": "OTUS user-service CRUD",
+	"timestamp": "2026-07-15T09:07:19.363Z",
+	"collection_id": "0-4a5a6f74-9b27-4a21-945b-bc4f9f21c036",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "202a7d9d-9f0d-4d9c-9cce-efbd8881c196",
+			"name": "Create user",
+			"url": "http://arch.homework/user",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"status 200": true,
+				"user has id": true,
+				"username saved": true
+			},
+			"testPassFailCounts": {
+				"status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"user has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"username saved": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"status 200": true,
+					"user has id": true,
+					"username saved": true
+				}
+			]
+		},
+		{
+			"id": "2fae7ef8-1bd8-4402-8bf2-c253b23ad8a0",
+			"name": "Get user",
+			"url": "http://arch.homework/user/5",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"status 200": true,
+				"username matches": true,
+				"firstName matches": true
+			},
+			"testPassFailCounts": {
+				"status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"username matches": {
+					"pass": 1,
+					"fail": 0
+				},
+				"firstName matches": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"status 200": true,
+					"username matches": true,
+					"firstName matches": true
+				}
+			]
+		},
+		{
+			"id": "09c9d1cd-b166-420f-8153-50795921423c",
+			"name": "Update user",
+			"url": "http://arch.homework/user/5",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"status 200": true,
+				"firstName updated": true
+			},
+			"testPassFailCounts": {
+				"status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"firstName updated": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"status 200": true,
+					"firstName updated": true
+				}
+			]
+		},
+		{
+			"id": "03ed5202-2c8b-405a-89c8-0917b2ac1a3a",
+			"name": "Get user after update",
+			"url": "http://arch.homework/user/5",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"status 200": true,
+				"firstName is updated in db": true,
+				"email is updated in db": true
+			},
+			"testPassFailCounts": {
+				"status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"firstName is updated in db": {
+					"pass": 1,
+					"fail": 0
+				},
+				"email is updated in db": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"status 200": true,
+					"firstName is updated in db": true,
+					"email is updated in db": true
+				}
+			]
+		},
+		{
+			"id": "a56ac77a-d5ca-45d5-aff0-897a52d81f74",
+			"name": "Delete user",
+			"url": "http://arch.homework/user/5",
+			"time": 10,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"status 204": true
+			},
+			"testPassFailCounts": {
+				"status 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"status 204": true
+				}
+			]
+		},
+		{
+			"id": "3918d76c-0058-4585-8cde-303ea62a2940",
+			"name": "Get deleted user",
+			"url": "http://arch.homework/user/5",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status 404": true,
+				"error message": true
+			},
+			"testPassFailCounts": {
+				"status 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"status 404": true,
+					"error message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 52,
+	"collection": {
+		"requests": [
+			{
+				"id": "202a7d9d-9f0d-4d9c-9cce-efbd8881c196",
+				"method": "POST"
+			},
+			{
+				"id": "2fae7ef8-1bd8-4402-8bf2-c253b23ad8a0",
+				"method": "GET"
+			},
+			{
+				"id": "09c9d1cd-b166-420f-8153-50795921423c",
+				"method": "PUT"
+			},
+			{
+				"id": "03ed5202-2c8b-405a-89c8-0917b2ac1a3a",
+				"method": "GET"
+			},
+			{
+				"id": "a56ac77a-d5ca-45d5-aff0-897a52d81f74",
+				"method": "DELETE"
+			},
+			{
+				"id": "3918d76c-0058-4585-8cde-303ea62a2940",
+				"method": "GET"
+			}
+		]
+	}
+}
