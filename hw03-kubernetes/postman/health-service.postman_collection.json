@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "OTUS health-service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://arch.homework"
+    },
+    {
+      "key": "student",
+      "value": "gustinov"
+    }
+  ],
+  "item": [
+    {
+      "name": "GET /health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('status 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('body status OK', function () { pm.expect(pm.response.json().status).to.eql('OK'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET /health/",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health/"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('status 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('body status OK', function () { pm.expect(pm.response.json().status).to.eql('OK'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET /otusapp/{student}/health (rewrite)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/otusapp/{{student}}/health"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('status 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('body status OK', function () { pm.expect(pm.response.json().status).to.eql('OK'); });"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
