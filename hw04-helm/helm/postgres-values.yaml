@@ -1,0 +1,16 @@
+auth:
+  username: app
+  password: apppass123
+  database: users_db
+
+primary:
+  persistence:
+    enabled: true
+    size: 1Gi
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
